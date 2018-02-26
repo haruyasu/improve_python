@@ -87,3 +87,8 @@ ls = ["5","2","1","4","3"]
 print "".join(sorted(ls))
 num = 4215
 print sorted([c for c in str(num) + '0000'], reverse=True)[:4]
+
+# set
+names = ["a", "b", "a", "v", "b", "c"]
+set_names = set(names)
+print(set_names)
