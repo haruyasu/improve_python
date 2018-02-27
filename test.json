@@ -1,0 +1,27 @@
+{
+  "book1":{
+    "title":  "Python Beginners",
+    "year":   2015,
+    "page":   200
+  },
+  "book2":{
+    "title":  "Python Developers",
+    "year":   2018,
+    "page":   400
+  },
+  "book3":{
+    "title":  "Python Advance",
+    "year":   2020,
+    "page":   600
+  },
+  "book4":{
+    "title":  "Python Test",
+    "year":   2022,
+    "page":   800
+  },
+  "book5":{
+    "title":  "Python Specialist",
+    "year":   2024,
+    "page":   1000
+  }
+}
