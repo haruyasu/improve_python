@@ -18,3 +18,10 @@ print(len(numbers))
 
 for name, numbers in zip(names, numbers):
     print(name, numbers)
+
+#######
+for i, j in enumerate(range(5, 0, -1)):
+    print(i, j)
+
+for i, j in enumerate(range(5, 0, -1), start=5):
+    print(i, j)
