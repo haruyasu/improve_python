@@ -43,6 +43,9 @@ class Example(QtGui.QMainWindow):
         self.add_test = self.a + self.b
         return self.add_test
 
+    def check(self, block):
+        return set(block) == set(range(1, 10))
+
 
 def main():
     app = QtGui.QApplication(sys.argv)
@@ -51,42 +54,13 @@ def main():
     _add = ex.add(4, 6)
     print _add
 
+    block = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print ex.check(block)
+    block = [1, 2, 3, 4, 7, 6, 7, 8, 9]
+    print ex.check(block)
+
     sys.exit(app.exec_())
 
 
 if __name__ == '__main__':
     main()
-
-
-
-
-#
-# import sys
-# from PySide import QtGui
-#
-# def print_state(state):
-#     if state:
-#         print("enable")
-#     else:
-#         print("disable")
-#
-# def main():
-#     app = QtGui.QApplication(sys.argv)
-#     main_window = QtGui.QMainWindow()
-#     main_window.setWindowTitle("Check")
-#     main_window.resize(300, 100)
-#     panel = QtGui.QWidget()
-#     checkbox = QtGui.QCheckBox("Checkbox", parent=panel)
-#     button = QtGui.QPushButton("Push checkbox state", parent=panel)
-#     layout = QtGui.QVBoxLayout()
-#     layout.addWidget(checkbox)
-#     layout.addWidget(button)
-#     panel.setLayout(layout)
-#     button.clicked.connect(checkbox.toggle)
-#     checkbox.stateChanged.connect(print_state)
-#     main_window.setCentralWidget(panel)
-#     main_window.show()
-#     app.exec_()
-#
-# if __name__ == '__main__':
-#     main()
