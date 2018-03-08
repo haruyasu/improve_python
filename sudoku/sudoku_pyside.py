@@ -28,9 +28,9 @@ class GUI(QWidget):
                              [9, 0, 3, 0, 0, 4, 0, 2, 8],
                              [0, 0, 8, 0, 0, 0, 0, 5, 7]]
 
-        self.initUI()
+        self._initUI()
 
-    def initUI(self):
+    def _initUI(self):
         self.setWindowTitle("Sudoku")
         self.resize(500, 500)
 
@@ -41,26 +41,57 @@ class GUI(QWidget):
             for j in xrange(9):
                 self.puzzle[i].append(self.start_puzzle[i][j])
 
-        print self.puzzle
-
         for i in xrange(9):
             for j in xrange(9):
-                answer = self.puzzle[i][j]
+                self.answer = self.puzzle[i][j]
+                x = MARGIN + j * SIDE + SIDE / 2
+                y = MARGIN + i * SIDE + SIDE / 2
+                original = self.start_puzzle[i][j]
+                color = "black" if self.answer == original else "sea green"
 
-                if answer != 0:
-                    x = MARGIN + j * SIDE + SIDE / 2
-                    y = MARGIN + i * SIDE + SIDE / 2
-                    original = self.start_puzzle[i][j]
-                    color = "black" if answer == original else "sea green"
-                    # self.canvas.create_text(x, y, text=answer, tags="numbers", fill=color)
+                if self.answer != 0:
+                    self.number = QLabel(str(self.answer), self)
+                else:
+                    self.number = QLabel("", self)
 
-                    print("x={0}, y={1}, answer={2}".format(x, y, answer))
+                self.number.move(x, y)
+                self.number.mouseDoubleClickEvent = self._clickedText
+
+    def _clickedText(self, event):
+        self.number.setText = self.answer
+        print self.answer
 
 
-        layout = QVBoxLayout()
-        button = QPushButton("Clear answers")
-        layout.addWidget(button)
-        self.setLayout(layout)
+    def paintEvent(self, e):
+        qp = QPainter()
+        qp.begin(self)
+        self.drawLines(qp)
+        qp.end()
+
+    def drawLines(self, qp):
+        for i in xrange(10):
+            if i % 3 == 0:
+                pen = QPen(Qt.blue, 1, Qt.SolidLine)
+                qp.setPen(pen)
+            else:
+                pen = QPen(Qt.gray, 1, Qt.SolidLine)
+                qp.setPen(pen)
+
+            x0 = MARGIN + i * SIDE
+            y0 = MARGIN
+            x1 = MARGIN + i * SIDE
+            y1 = HEIGHT - MARGIN
+            qp.drawLine(x0, y0, x1, y1)
+
+            x0 = MARGIN
+            y0 = MARGIN + i * SIDE
+            x1 = WIDTH - MARGIN
+            y1 = MARGIN + i * SIDE
+            qp.drawLine(x0, y0, x1, y1)
+
+
+        # layout = QVBoxLayout()
+        # self.setLayout(layout)
 
 
 def main():
