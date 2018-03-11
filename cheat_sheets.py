@@ -1,82 +1,111 @@
-#Cheat Sheets
+# Cheat Sheets
 # String Methods
 s = "OH, my paws and whiskers!"
 t = "I'm late!"
 
 # Change Case
 s.capitalize()
-#'Oh, my paws and whiskers!'
+# 'Oh, my paws and whiskers!'
+
 s.lower()
-#'oh, my paws and whiskers!'
+# 'oh, my paws and whiskers!'
+
 s.swapcase()
-#'oh, MY PAWS AND WHISKERS!'
+# 'oh, MY PAWS AND WHISKERS!'
+
 s.title()
-#'Oh, My Paws And Whiskers!'
+# 'Oh, My Paws And Whiskers!'
+
 s.upper()
-#'OH, MY PAWS AND WHISKERS!'
+# 'OH, MY PAWS AND WHISKERS!'
 
-#Search
+# Search
 s.count('w')
-#2
+# 2
+
 s.find('w')
-#9
+# 9
+
 s.index('w')
-#9
+# 9
+
 s.rfind('w')
-#16
+# 16
+
 s.rindex('w')
-#16
+# 16
+
 s.startswith('OH')
-#True
+# True
 
-#Modify
+# Modify
 ''.join(s)
-#'OH, my paws and whiskers!'
+# 'OH, my paws and whiskers!'
+
 ' '.join(s)
-#'O H ,   m y   p a w s   a n d   w h i s k e r s !'
+# 'O H ,   m y   p a w s   a n d   w h i s k e r s !'
+
 ' '.join((s, t))
-#"OH, my paws and whiskers! I'm late!"
+# "OH, my paws and whiskers! I'm late!"
+
 s.lstrip('HO')
-#', my paws and whiskers!'
+# ', my paws and whiskers!'
+
 s.replace('H', 'MG')
-#'OMG, my paws and whiskers!'
+# 'OMG, my paws and whiskers!'
+
 s.rsplit()
-#['OH,', 'my', 'paws', 'and', 'whiskers!']
+# ['OH,', 'my', 'paws', 'and', 'whiskers!']
+
 s.rsplit(' ', 1)
-#['OH, my paws and', 'whiskers!']
+# ['OH, my paws and', 'whiskers!']
+
 s.split()
-#['OH,', 'my', 'paws', 'and', 'whiskers!']
+# ['OH,', 'my', 'paws', 'and', 'whiskers!']
+
 s.split(' ')
-#['OH,', 'my', 'paws', 'and', 'whiskers!']
+# ['OH,', 'my', 'paws', 'and', 'whiskers!']
+
 s.splitlines()
-#['OH, my paws and whiskers!']
+# ['OH, my paws and whiskers!']
+
 s.strip()
-#'OH, my paws and whiskers!'
+# 'OH, my paws and whiskers!'
+
 s.strip('s!')
-#'OH, my paws and whisker'
+# 'OH, my paws and whisker'
 
-#Format
+# Format
 s.center(30)
-#'  OH, my paws and whiskers!   '
-s.expandtabs()
-#'OH, my paws and whiskers!'
-s.ljust(30)
-#'OH, my paws and whiskers!     '
-s.rjust(30)
-#'     OH, my paws and whiskers!'
+# '  OH, my paws and whiskers!   '
 
-#String Type
+s.expandtabs()
+# 'OH, my paws and whiskers!'
+
+s.ljust(30)
+# 'OH, my paws and whiskers!     '
+
+s.rjust(30)
+# '     OH, my paws and whiskers!'
+
+# String Type
 s.isalnum()
-#False
+# False
+
 s.isalpha()
-#False
+# False
+
 s.isprintable()
-#True
+# True
+
 s.istitle()
-#False
+# False
+
 s.isupper()
-#False
+# False
+
 s.isdecimal()
-#False
+# False
+
 s.isnumeric()
-#False
+# False
