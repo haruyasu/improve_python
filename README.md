@@ -4,4 +4,3 @@
 * classmethod
 * staticmethod
 * character
-* 

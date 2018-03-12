@@ -38,7 +38,7 @@ li = list(map(int, input().split(",")))
 # test1
 # test2
 # test3
-n = list(input())
+n = int(input())
 s = [input() for i in range(n)]
 # OUT ["test1", "test2", "test3"]
 

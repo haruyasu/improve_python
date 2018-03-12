@@ -183,5 +183,24 @@ def main():
     #         j=bag[i]
     # print(j)
 
+    # import re
+    #
+    # text = "18k4m"
+    # matchObj = re.search(r'[0-9]+', text)
+    #
+    # if matchObj:
+    #     print matchObj.group()
+
+    x, y = map(int, input().split())
+    li = []
+    for i in range(10):
+        li.append(x)
+        x += y
+
+    maped_list = map(str, li)
+    mojiretu = " ".join(maped_list)
+
+    print(mojiretu)
+
 if __name__ == '__main__':
     main()

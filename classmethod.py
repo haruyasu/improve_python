@@ -2,16 +2,16 @@ class SampleClass:
     def sample_method(self):
         print "Hello World"
 
-#SampleClass.sample_method()
-#error
+# SampleClass.sample_method()
+# error
 
 #########################
-#instance
+# instance
 sample_class = SampleClass()
 sample_class.sample_method()
 
 #########################
-#classmethod
+# classmethod
 class SampleClassMethod:
     @classmethod
     def sample_method(self):
@@ -20,7 +20,7 @@ class SampleClassMethod:
 SampleClassMethod.sample_method()
 
 #########################
-#static method
+# static method
 class DiffClassStaticMethod:
     @classmethod
     def class_method(*args):

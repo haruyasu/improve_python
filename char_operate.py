@@ -71,6 +71,7 @@ print "hello world".upper()
 
 # split()
 print "apple orange banana grape".split()
+# ['apple', 'orange', 'banana', 'grape']
 print "apple,orange,banana,grape".split(",")
 print "apple,orange,banana,grape".split(",", 2)
 
