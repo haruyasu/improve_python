@@ -98,17 +98,6 @@ while True:
 print li
 # OUT [[1, 2, 3, 4], [5, 6, 7, 8], [9, 0, 1, 2]]
 
-# IN
-# 3
-# 1 2 3 4
-# 5 6 7 8
-# 9 0 1 2
-n = int(input())
-li = []
-li.append(list(map(int, input().split())) for i in range(n))
-print li
-# OUT [[1, 2, 3, 4], [5, 6, 7, 8], [9, 0, 1, 2]]
-
 ###############
 # a = -1, b = -2
 print(a / b)

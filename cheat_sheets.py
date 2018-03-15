@@ -109,3 +109,5 @@ s.isdecimal()
 
 s.isnumeric()
 # False
+
+text = s.replace('\n', '')
