@@ -13,9 +13,9 @@ def test():
     print "Hello Decorator"
 
 test()
-#--start--
-#Hello Decorator
-#--end--
+# --start--
+# Hello Decorator
+# --end--
 
 #########################
 # decorate return value
@@ -35,9 +35,9 @@ def test2():
     return "Hello Decorator"
 
 print test2()
-#--start--
-#Hello Decorator!
-#--end--
+# --start--
+# Hello Decorator!
+# --end--
 
 #########################
 #decorate nest .ex html
@@ -67,7 +67,7 @@ def test3():
     return "Hello Decorator"
 
 print test3()
-#<html><body>Hello Decorator</body></html>
+# <html><body>Hello Decorator</body></html>
 
 #########################
 # decorate parameter
@@ -86,7 +86,7 @@ def test4(str):
     return str
 
 print test4("Hello Decorator!!")
-#<p>Hello Decorator!!</p>
+# <p>Hello Decorator!!</p>
 
 #########################
 # decorate tag
@@ -108,4 +108,4 @@ def test5():
     return "Hello Decorator!"
 
 print test5()
-#<html><body>Hello Decorator!</body></html>
+# <html><body>Hello Decorator!</body></html>
