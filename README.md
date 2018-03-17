@@ -1,4 +1,4 @@
-# Improve Python
+# Python Basic Tips
 
 * class
 * list
@@ -22,5 +22,5 @@
 * csv
 * json
 
-# coding competition
+# Programming competition
 * how to input(input.py)
