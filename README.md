@@ -9,6 +9,7 @@
 * collections
 * enumerate
 * map
+* zip
 * path
 * re
 * slice

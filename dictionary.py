@@ -54,6 +54,31 @@ d["python"] = "great"
 print d
 # {'test': 100, 'apple': 150, 'orange': 350, 'banana': 250, 'python': 'great'}
 
+######
+d = {'a': 1, 'b': 2, 'c': 3}
+print(max(d.values()))
+# 3
+print(max([(v, k) for k, v in d.items()])[1])
+# c
+print(max((v, k) for (k, v) in d.items())[1])
+# c
+print(d.items())
+# [('a', 1), ('c', 3), ('b', 2)]
+
+######
+# list to dict
+li1 = [("a", 3), ("b", 2), ("c", 5)]
+di1 = dict(li1)
+print(di1)
+# {'a': 3, 'c': 5, 'b': 2}
+
+######
+# list to dict
+li2 = ["a", 3, "b", 2, "c", 5]
+di2 = dict(zip(li2[0::2], li2[1::2]))
+print(di2)
+# {'a': 3, 'c': 5, 'b': 2}
+
 #######
 words = ["apple", "orange", "banana", "alpha", "beta"]
 
@@ -75,16 +100,6 @@ print results2
 # {'a': ['apple', 'alpha'], 'b': ['banana', 'beta'], 'o': ['orange']}
 
 ########
-# collections.defaultdict
-from collections import defaultdict
-
-results3 = defaultdict(list)
-for word in words:
-    results3[word[0]].append(word)
-print results3
-# defaultdict(<type 'list'>, {'a': ['apple', 'alpha'], 'b': ['banana', 'beta'], 'o': ['orange']})
-
-########
 # itertools.groupby
 from itertools import groupby
 from operator import itemgetter
@@ -92,44 +107,6 @@ from operator import itemgetter
 results4 = {k: list(v) for k, v in groupby(sorted(words), key=itemgetter(0))}
 print results4
 # {'a': ['alpha', 'apple'], 'b': ['banana', 'beta'], 'o': ['orange']}
-
-#######
-from collections import Counter
-
-mylist = ["apple","banana","apple","apple","orange"]
-mycounter = Counter(mylist)
-print(mycounter)
-# Counter({'apple': 3, 'orange': 1, 'banana': 1})
-
-#######
-from collections import Counter
-
-mydict = {"apple" : 1, "banana" : 4, "orange" : 3}
-mycounter = Counter(mydict)
-print(mycounter)
-# Counter({'banana': 4, 'orange': 3, 'apple': 1})
-
-#######
-from collections import Counter
-
-myword = "helloworld!"
-mycounter = Counter(myword)
-print(mycounter)
-# Counter({'l': 3, 'o': 2, '!': 1, 'e': 1, 'd': 1, 'h': 1, 'r': 1, 'w': 1})
-
-#######
-from collections import Counter
-
-phrase = "my motto is one for all all for one"
-words = phrase.split()
-mycounter = Counter(words)
-print(mycounter)
-# Counter({'all': 2, 'for': 2, 'one': 2, 'is': 1, 'motto': 1, 'my': 1})
-
-for i in mycounter.keys():
-    if i == "for":
-        print(mycounter[i])
-# 2
 
 #######
 list = [{'Key': 'Name',     'Value': 'apple'},
