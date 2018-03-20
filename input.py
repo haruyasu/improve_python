@@ -98,6 +98,17 @@ while True:
 print li
 # OUT [[1, 2, 3, 4], [5, 6, 7, 8], [9, 0, 1, 2]]
 
+# IN
+# 3 4
+# 1 2 3 4
+# 5 6 7 8
+# 9 0 1 2
+n, m = map(int, input().split())
+a = []
+for i in range(m):
+    a.append(map(int, input().split()))
+print a
+
 ###############
 # a = -1, b = -2
 print(a / b)
@@ -119,3 +130,18 @@ li = [1,2,5,2,4,6,7,8,6,56,3,56,76,34,32,2,6,0,32,6,0]
 index = bisect.bisect_right(sorted(li), 0)
 clearli = li[index:]
 print clearli
+
+
+#####
+# output
+print A, B, C
+# A B C
+
+print ','.join([1, 2, 3])
+# 1,2,3
+
+print ','.join(map(str, [A, B, C]))
+# A,B,C
+
+print 'Case 1: {0} {1}'.format(A, B)
+# Case 1: A B

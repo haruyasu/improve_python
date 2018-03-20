@@ -43,8 +43,8 @@ for k, v in sorted(dct.items(), key=lambda x: -x[0]):
 
 #####
 # value sort
-dct = {2: 3, 3: 4, 1: 2, 0: 8, 4: 2}
-for k, v in sorted(dct.items(), key=lambda x: x[1]):
+dic = {2: 3, 3: 4, 1: 2, 0: 8, 4: 2}
+for k, v in sorted(dic.items(), key=lambda x: x[1]):
     print(str(k) + ": " + str(v))
 # 1: 2
 # 4: 2
@@ -54,8 +54,8 @@ for k, v in sorted(dct.items(), key=lambda x: x[1]):
 
 #####
 # value reverse
-dct = {2: 3, 3: 4, 1: 2, 0: 8, 4: 2}
-for k, v in sorted(dct.items(), key=lambda x: -x[1]):
+dic = {2: 3, 3: 4, 1: 2, 0: 8, 4: 2}
+for k, v in sorted(dic.items(), key=lambda x: -x[1]):
     print(str(k) + ": " + str(v))
 # 0: 8
 # 3: 4

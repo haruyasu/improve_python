@@ -79,6 +79,14 @@ di2 = dict(zip(li2[0::2], li2[1::2]))
 print(di2)
 # {'a': 3, 'c': 5, 'b': 2}
 
+######
+keys = ['a', 'b', 'c']
+values = [10, 20, 30]
+
+dic = dict(zip(keys, values))
+print(dic)
+# {'a': 10, 'c': 30, 'b': 20}
+
 #######
 words = ["apple", "orange", "banana", "alpha", "beta"]
 
