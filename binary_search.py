@@ -30,3 +30,24 @@ print(bisect.bisect_left(li, x))
 
 print(bisect.bisect_right(li, x))
 # 3
+
+#####
+# serch
+abc = "abcdefghijklmnopqrstuvwxyz"
+t = "poiuytrewqlkjhgfdsamnbvcxz"
+li2 = ['snn', 'xufu', 'ngebmv', 'qwtg']
+n = 100
+
+####
+for k in range(n):
+    li3 = []
+    for i in range(len(li2)):
+        res = ""
+        for j in range(len(li2[i])):
+            serch = (li2[i][j])
+            index = (t.find(serch))
+            res += (abc[index])
+        li3.append(res)
+    li2 = li3
+
+print(" ".join(li2))
