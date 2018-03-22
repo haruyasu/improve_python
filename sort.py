@@ -62,3 +62,10 @@ for k, v in sorted(dic.items(), key=lambda x: -x[1]):
 # 2: 3
 # 1: 2
 # 4: 2
+
+#####
+list = [[10,4],[3,6],[4,6],[5,0],[4,9],[2,0]]
+list.sort(key=lambda x:x[0])
+list.sort(key=lambda x:x[1])
+print(list)
+# [[2, 0], [5, 0], [10, 4], [3, 6], [4, 6], [4, 9]]
