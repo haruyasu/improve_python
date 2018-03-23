@@ -2,11 +2,12 @@
 
 * class
 * list
-* dict
+* dictionary
 * tuple
 * sort
-* character
+* character operation
 * collections
+* itertools
 * enumerate
 * map
 * zip
