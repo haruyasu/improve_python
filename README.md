@@ -1,5 +1,7 @@
 # Python Basic Tips
 
+* if else
+  - comprehension
 * class
 * list
 * dictionary
