@@ -87,6 +87,14 @@ dic = dict(zip(keys, values))
 print(dic)
 # {'a': 10, 'c': 30, 'b': 20}
 
+#####
+# dict merge
+d1 = {"a": 1, "b": 2}
+d2 = {"b": 3, "d": 4}
+dic = dict(d1, ** d2)
+print(dic)
+# {'a': 1, 'b': 3, 'd': 4}
+
 #######
 words = ["apple", "orange", "banana", "alpha", "beta"]
 
