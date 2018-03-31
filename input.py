@@ -95,7 +95,7 @@ while True:
         li.append(list(map(int, input().split())))
     except:
         break
-print li
+print(li)
 # OUT [[1, 2, 3, 4], [5, 6, 7, 8], [9, 0, 1, 2]]
 
 # IN
@@ -104,10 +104,10 @@ print li
 # 5 6 7 8
 # 9 0 1 2
 n, m = map(int, input().split())
-a = []
+li = []
 for i in range(m):
-    a.append(map(int, input().split()))
-print a
+    li.append(list(map(int, input().split())))
+print(li)
 
 ###############
 # a = -1, b = -2
