@@ -2,15 +2,15 @@ lis = []
 lis.append(1)
 lis.append(2)
 lis.append(3)
-print lis
+print(lis)
 
 lis2 = []
 lis2 += [11, 22, 33]
-print lis2
+print(lis2)
 
 lis3 = []
 lis3.extend([111, 222, 333])
-print lis3
+print(lis3)
 
 ######
 # sort doble list
@@ -34,3 +34,17 @@ x = []
 for i in li:
     x.extend(i)
 print(x)
+
+####
+def pair10(li):
+    number_seen = []
+    for item in li:
+        if (10 - item) in number_seen:
+            print(str(10 - item) + ", " + str(item))
+            return
+        else:
+            number_seen.append(item)
+    print("There is no pair")
+
+li = [3, 4, 1, 2, 9]
+pair10(li)
