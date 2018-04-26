@@ -7,7 +7,7 @@ def reverse(s):
     return reverse(s[1:]) + s[0]
 
 # print(reverse("abc"))
-
+# cba
 
 ####
 # String Permutation
@@ -19,13 +19,13 @@ def permute(s):
         for i, let in enumerate(s):
             for perm in permute(s[:i] + s[i + 1:]):
                 
-                print("Current letter is:", let)
-                print("perm is:", perm)
+                # print("Current letter is:", let)
+                # print("perm is:", perm)
                 out += [let + perm]
     return out
 
 # print(permute("abc"))
-
+# ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
 
 ####
 # Fibonnaci Sequence
@@ -38,6 +38,7 @@ def fib_iter(n):
     return a
 
 # print(fib_iter(10))
+# 55
 
 def fib_rec(n):
     if n == 0 or n == 1:
@@ -46,6 +47,7 @@ def fib_rec(n):
         return fib_rec(n - 1) + fib_rec(n - 2)
 
 # print(fib_rec(10))
+# 55
 
 n = 10
 cache = [None] * (n + 1)
@@ -62,7 +64,7 @@ def fib_dyn(n):
     return cache[n]
 
 # print(fib_dyn(10))
-
+# 55
 
 ####
 # Coin Change
@@ -79,4 +81,5 @@ def rec_coin(target, coins):
         
     return min_coins
 
-print(rec_coin(15, [1, 5, 10]))
+# print(rec_coin(15, [1, 5, 10]))
+# 2
