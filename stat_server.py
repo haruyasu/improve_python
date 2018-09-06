@@ -4,11 +4,16 @@ import struct
 
 FORMAT = "<IIIIIIIIII"
 
-stat_data = os.stat('algorithm.py')
+stat = os.stat('algorithm.py')
 
-print(stat_data)
+print(stat)
 
-packed = struct.pack(FORMAT, stat_data)
-unpacked = struct.unpack(FORMAT, packed)
+#packed = struct.pack(FORMAT, stat)
+#unpacked = struct.unpack(FORMAT, packed)
 
-print(unpacked)
+#print(unpacked)
+
+for i in dir(stat):
+    if i.startswith("st_"):
+        if not i.endswith("_ns"):
+            print(i)
